@@ -12,7 +12,7 @@ int main(){
   }
   //checking next round participants
   for(int i=0;i<n;i++){
-    if(array[i]>=k){
+    if(array[i]>=array[k-1] && array[i]>0){
       t++;
     }
   }
