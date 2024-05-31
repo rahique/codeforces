@@ -5,7 +5,8 @@
 [Bit++](https://codeforces.com/problemset/problem/282/A),
 [Team](https://codeforces.com/problemset/problem/231/A),
 [Next Round](https://codeforces.com/problemset/problem/158/A),
-[Domino Piling](https://codeforces.com/problemset/problem/50/A)
+[Domino Piling](https://codeforces.com/problemset/problem/50/A),
+[Beautiful Matrix](https://codeforces.com/problemset/problem/263/A)
 
 ## Code
 
@@ -14,7 +15,8 @@
 [Bit++](#bit),
 [Team](#team),
 [Next Round](#next-round),
-[Domino Piling](#domino-piling)
+[Domino Piling](#domino-piling),
+[Beautiful Matrix](#beautiful-matrix)
 
 ### Watermelon
 
@@ -165,5 +167,34 @@ int main(){
   scanf("%d%d", &M, &N);
   int board = M*N;
   printf("%d\n", board/2);
+}
+```
+
+### Beautiful Matrix
+
+// Code for Domino Beautiful Matrix
+
+```
+#include <stdio.h>
+#include <stdlib.h>
+int main(){
+  int matrix[5][5];
+  int i,j,k=0;
+  int row=-1, col=-1;
+
+  for(i = 0; i < 5;i++){
+    for (j = 0; j < 5; j++) {
+      scanf("%d", &matrix[i][j]);
+      if(matrix[i][j]==1){
+          row=i;
+          col=j;
+        }
+      }
+    }
+  //calculating moves
+  k = abs(row-2) + abs(col-2);
+  printf("%d\n", k);
+
+  return 0;
 }
 ```
